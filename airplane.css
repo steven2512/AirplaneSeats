@@ -109,3 +109,12 @@ body {
     margin-top: 10px;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7)
 }
+
+#count,
+#cost {
+    color: rgb(238, 255, 0);
+}
+
+.text {
+    margin-bottom: 0px;
+}
