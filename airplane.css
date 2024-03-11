@@ -41,6 +41,10 @@ body {
     background-color: rgba(0, 0, 0, 0.281);
 }
 
+.container {
+    perspective: 1000px;
+}
+
 .seat {
     background-color: rgb(209, 203, 203);
     height: 12px;
@@ -96,7 +100,11 @@ body {
 
 .screen {
     background-color: white;
-    height: 2px;
+    height: 75px;
+    border: 0;
     width: 100%;
-    margin-bottom: 20px;
+    transform: rotateX(-35deg);
+    margin-bottom: 35px;
+    margin-top: 10px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7)
 }
