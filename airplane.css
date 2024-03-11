@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: rgb(59, 147, 210);
+    background-color: rgb(47, 134, 112);
     color: white;
     display: flex;
     min-height: 100vh;
@@ -23,4 +23,34 @@ body {
     border-radius: 5px;
     font-size: 14px;
     margin-left: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.seat.selected {
+    background-color: rgb(59, 147, 210);
+}
+
+.seat.occupied {
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.seat {
+    background-color: rgb(209, 203, 203);
+    height: 12px;
+    width: 15px;
+    margin: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.seat:nth-of-type(3) {
+    margin-right: 25px;
 }
