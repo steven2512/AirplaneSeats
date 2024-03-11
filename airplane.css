@@ -55,3 +55,30 @@ body {
 .seat:nth-of-type(7) {
     margin-right: 15px;
 }
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    background-color: rgb(51, 112, 253);
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+    background-color: rgb(209, 203, 203);
+}
+
+.showcase .seat.selected:hover {
+    cursor: default;
+    transform: scale(1);
+    background-color: rgb(59, 147, 210);
+}
+
+.showcase {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
