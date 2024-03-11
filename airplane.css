@@ -79,6 +79,24 @@ body {
     list-style-type: none;
     background-color: rgba(0, 0, 0, 0.1);
     display: flex;
+    justify-content: space-between;
     border-radius: 10px;
     padding: 10px 15px;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.showcase small {
+    margin-left: 2px;
+}
+
+.screen {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 20px;
 }
