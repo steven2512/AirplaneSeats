@@ -12,3 +12,15 @@ body {
     align-items: center;
     font-family: "Lato", sans-serif;
 }
+
+.airplane-container {
+    margin: 20px 0;
+}
+
+.airplane-container select {
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+}
