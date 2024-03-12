@@ -4,13 +4,14 @@ const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
 
+
+
 // seat && cost count update function
 function selectedUpdateCount() {
     const ticketPrice = +(classSelected.value)
     let allSelectedSeats = document.querySelectorAll('.row .seat.selected')
     const seatsIndex = [...allSelectedSeats].map((seat) => [...seats].indexOf(seat)
     )
-    console.log(seatsIndex)
     localStorage.setItem('allSelectedSeats', JSON.stringify(seatsIndex))
     let totalSeats = allSelectedSeats.length
     count.innerText = totalSeats.toString()
@@ -18,8 +19,9 @@ function selectedUpdateCount() {
 }
 
 // movie select event
-classSelected.addEventListener('change', () => {
-    selectedUpdateCount()
+classSelected.addEventListener('change', (e) => {
+    localStorage.setItem('movieSelected', e.target.selectedIndex);
+    selectedUpdateCount();
 })
 
 // Seat click event
