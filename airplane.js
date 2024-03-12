@@ -61,6 +61,7 @@ clearAll.addEventListener('click', function () {
         }
     })
     count.innerText = '0'
+    cost.innerText = '0'
     classSelected.selectedIndex = '0'
 
 
