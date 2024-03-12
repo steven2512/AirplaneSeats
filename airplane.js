@@ -3,18 +3,23 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)')
 const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
+const ticketPrice = +(classSelected.value)
+
+function selectedUpdateCount() {
+
+    let allSelectedSeats = document.querySelectorAll('.row .seat.selected')
+    let totalSeats = allSelectedSeats.length
+    count.innerText = totalSeats.toString()
+    cost.innerText = (ticketPrice * totalSeats).toString()
+}
 
 
-seats.forEach((seat) => {
-    seat.addEventListener('click', function () {
-        if (seat.className !== 'seat selected') {
-            let ticketPrice = +(classSelected.value)
-            let seatTotal = +count.innerText + 1
-            count.innerText = seatTotal.toString()
-            seat.className = 'seat selected'
-            cost.innerText = (ticketPrice * seatTotal).toString()
+
+container.addEventListener('click', (e) => {
+    if (e.target.classList.contains('seat')) {
+        if (!e.target.classList.contains('occupied')) {
+            e.target.classList.toggle('selected')
+            selectedUpdateCount()
         }
-
-    })
+    }
 })
-
