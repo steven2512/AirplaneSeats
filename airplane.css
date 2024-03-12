@@ -119,3 +119,10 @@ body {
     margin-bottom: 0px;
     margin-top: 15px;
 }
+
+.clear {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    color: rgba(255, 255, 255, 0.778)
+}
