@@ -3,8 +3,22 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)')
 const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
+populateUI()
 
+// Retrieve dat afrom localStorage and populate the UI
+function populateUI() {
+    const allSelectedSeats = JSON.parse(localStorage.getItem('allSelectedSeats'));
+    const movieSelected = localStorage.getItem('movieSelected');
+    if (allSelectedSeats !== null && allSelectedSeats.length > 0) {
+        allSelectedSeats.forEach(seat => {
+            seats[seat].classList.add('selected')
+        });
+    }
+    if (movieSelected !== null) {
+        classSelected.selectedIndex = movieSelected
+    }
 
+}
 
 // seat && cost count update function
 function selectedUpdateCount() {
@@ -34,3 +48,6 @@ container.addEventListener('click', (e) => {
     }
 
 })
+
+// Initial count and total set - avoid saving these to localStorage and save memory
+selectedUpdateCount()
