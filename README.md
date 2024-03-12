@@ -1,0 +1,1 @@
+An advanced online airplane ticket booking simulator developed with HTML, CSS, and JavaScript, featuring an intuitive UI that allows for seamless seat selection across different classes, with real-time cost calculations and seat tally, providing a comprehensive and immersive user experience.
