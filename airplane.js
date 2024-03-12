@@ -8,10 +8,13 @@ const classSelected = document.querySelector('#airplane')
 function selectedUpdateCount() {
     const ticketPrice = +(classSelected.value)
     let allSelectedSeats = document.querySelectorAll('.row .seat.selected')
+    const seatsIndex = [...allSelectedSeats].map((seat) => {
+        return [...seats].indexOf(seat)
+    })
+    console.log(seatsIndex)
     let totalSeats = allSelectedSeats.length
     count.innerText = totalSeats.toString()
     cost.innerText = (ticketPrice * totalSeats).toString()
-    console.log(allSelectedSeats)
 }
 
 classSelected.addEventListener('change', () => {
