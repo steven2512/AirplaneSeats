@@ -3,10 +3,10 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)')
 const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
-populateUI()
+savedInfo()
 
-// Retrieve dat afrom localStorage and populate the UI
-function populateUI() {
+// Retrieve dat afrom localStorage and display all saved variables
+function savedInfo() {
     const allSelectedSeats = JSON.parse(localStorage.getItem('allSelectedSeats'));
     const movieSelected = localStorage.getItem('movieSelected');
     if (allSelectedSeats !== null && allSelectedSeats.length > 0) {
