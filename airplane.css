@@ -124,5 +124,12 @@ body {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
-    color: rgba(255, 255, 255, 0.778)
+    color: rgba(255, 255, 255, 0.862);
+    transition: 0.2s ease-in;
+}
+
+.clear:hover {
+    cursor: pointer;
+    background-color: rgba(0, 200, 255, 0.1);
+    color: white;
 }
