@@ -21,7 +21,7 @@ function savedInfo() {
 }
 
 // seat && cost count update function
-function selectedUpdateCount() {
+function selectedUpdate() {
     const ticketPrice = +(classSelected.value)
     let allSelectedSeats = document.querySelectorAll('.row .seat.selected')
     const seatsIndex = [...allSelectedSeats].map((seat) => [...seats].indexOf(seat)
@@ -50,4 +50,4 @@ container.addEventListener('click', (e) => {
 })
 
 // Initial count and total set - avoid saving these to localStorage and save memory
-selectedUpdateCount()
+selectedUpdate()
