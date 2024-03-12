@@ -38,7 +38,7 @@ function selectedUpdate() {
 // movie select event
 classSelected.addEventListener('change', (e) => {
     localStorage.setItem('movieSelected', e.target.selectedIndex);
-    selectedUpdateCount();
+    selectedUpdate();
 })
 
 // Seat click event
@@ -46,7 +46,7 @@ container.addEventListener('click', (e) => {
     if (e.target.classList.contains('seat')) {
         if (!e.target.classList.contains('occupied')) {
             e.target.classList.toggle('selected')
-            selectedUpdateCount()
+            selectedUpdate()
         }
     }
 
