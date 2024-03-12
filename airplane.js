@@ -6,6 +6,9 @@ const cost = document.querySelector('#cost')
 
 seats.forEach((seat) => {
     seat.addEventListener('click', function () {
-
+        let countInt = parseInt(count.innerText)
+        let newValue = countInt + 1
+        count.innerText = newValue.toString()
+        debugger;
     })
 })
