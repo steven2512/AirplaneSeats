@@ -3,6 +3,7 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)')
 const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
+const clearAll = document.querySelector('.clear')
 savedInfo()
 
 // Retrieve dat afrom localStorage and display all saved variables
@@ -17,6 +18,11 @@ function savedInfo() {
     if (movieSelected !== null) {
         classSelected.selectedIndex = movieSelected
     }
+
+}
+
+//Clear all current and past selections
+function clearAll() {
 
 }
 
