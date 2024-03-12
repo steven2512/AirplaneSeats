@@ -64,6 +64,7 @@ clearAll.addEventListener('click', function () {
     cost.innerText = '0'
     classSelected.selectedIndex = '0'
 
+
 })
 
 
