@@ -3,7 +3,6 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)')
 const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
-const classB = document.querySelector('#airplane-container')
 
 
 function selectedUpdateCount() {
@@ -12,6 +11,7 @@ function selectedUpdateCount() {
     let totalSeats = allSelectedSeats.length
     count.innerText = totalSeats.toString()
     cost.innerText = (ticketPrice * totalSeats).toString()
+    console.log(allSelectedSeats)
 }
 
 classSelected.addEventListener('change', () => {
@@ -25,4 +25,5 @@ container.addEventListener('click', (e) => {
             selectedUpdateCount()
         }
     }
+
 })
