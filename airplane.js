@@ -3,8 +3,6 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)')
 const count = document.querySelector('#count')
 const cost = document.querySelector('#cost')
 const classSelected = document.querySelector('#airplane')
-const classB = document.querySelector('#airplane-container')
-const classA = document.querySelector('.text')
 
 
 function selectedUpdateCount() {
