@@ -21,10 +21,7 @@ function savedInfo() {
 
 }
 
-//Clear all current and past selections
-function clearAll() {
 
-}
 
 // seat && cost count update function
 function selectedUpdate() {
@@ -54,6 +51,20 @@ container.addEventListener('click', (e) => {
     }
 
 })
+
+//Clear all current and past selections
+clearAll.addEventListener('click', function () {
+    localStorage.clearAll
+    const a = [...seats].forEach((seat) => {
+        if (seat.classList.contains('selected')) {
+            seat.classList.toggle('selected')
+        }
+    })
+    count.innerText = '0'
+    cost.innerText = '0'
+
+})
+
 
 // Initial count and total set - avoid saving these to localStorage and save memory
 selectedUpdate()
