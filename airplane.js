@@ -11,6 +11,7 @@ function selectedUpdateCount() {
     const seatsIndex = [...allSelectedSeats].map((seat) => [...seats].indexOf(seat)
     )
     console.log(seatsIndex)
+    localStorage.setItem('allSelectedSeats', JSON.stringify(seatsIndex))
     let totalSeats = allSelectedSeats.length
     count.innerText = totalSeats.toString()
     cost.innerText = (ticketPrice * totalSeats).toString()
