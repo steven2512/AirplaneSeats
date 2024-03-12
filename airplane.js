@@ -54,7 +54,7 @@ container.addEventListener('click', (e) => {
 
 //Clear all current and past selections
 clearAll.addEventListener('click', function () {
-    localStorage.clear()
+
     const a = [...seats].forEach((seat) => {
         if (seat.classList.contains('selected')) {
             seat.classList.toggle('selected')
